@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Media pembelajaran interaktif golongan darah untuk siswa SMA dan mahasiswa">
+    <meta name="keywords" content="golongan darah, genetika, biologi, pembelajaran, ABO, Rhesus, pewarisan">
+    <meta name="author" content="GenetikaLab">
+    <title>Pembelajaran Golongan Darah - Genetika Interaktif</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- ============================================
+         NAVIGATION BAR
+         ============================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🧬</span>
+                <span class="logo-text">GenetikaLab</span>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#beranda" class="nav-link active">Beranda</a></li>
+                <li><a href="#konsep" class="nav-link">Konsep</a></li>
+                <li><a href="#pewarisan" class="nav-link">Pewarisan</a></li>
+                <li><a href="#simulasi" class="nav-link">Simulasi</a></li>
+                <li><a href="#kuis" class="nav-link">Kuis</a></li>
+                <li><a href="#kontak" class="nav-link">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section class="hero" id="beranda">
+        <div class="hero-container">
+            <div class="hero-content fade-in">
+                <h1 class="hero-title">
+                    Pembelajaran Golongan Darah:<br>
+                    <span class="gradient-text">Konsep, Pewarisan, dan Simulasi Genetika</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Media belajar interaktif untuk memahami sistem ABO dan Rhesus secara mendalam. 
+                    Pelajari genetika golongan darah dengan cara yang menyenangkan dan mudah dipahami!
+                </p>
+                <div class="hero-buttons">
+                    <a href="#konsep" class="btn btn-primary">Mulai Belajar</a>
+                    <a href="#simulasi" class="btn btn-secondary">Coba Simulasi</a>
+                </div>
+                
+                <!-- Stats -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Golongan Darah</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Sistem Rhesus</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10</div>
+                        <div class="stat-label">Soal Kuis</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-illustration fade-in">
+                <!-- SVG Illustration Blood Drop with DNA -->
+                <svg viewBox="0 0 400 400" class="hero-svg">
+                    <!-- Blood Drop -->
+                    <defs>
+                        <linearGradient id="bloodGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#c92a2a;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M200 80 Q150 150, 150 220 Q150 280, 200 320 Q250 280, 250 220 Q250 150, 200 80 Z" 
+                          fill="url(#bloodGradient)" class="pulse-animation"/>
+                    
+                    <!-- DNA Helix -->
+                    <g class="dna-helix">
+                        <ellipse cx="200" cy="140" rx="30" ry="8" fill="#4dabf7" opacity="0.8"/>
+                        <ellipse cx="200" cy="160" rx="30" ry="8" fill="#748ffc" opacity="0.8"/>
+                        <ellipse cx="200" cy="180" rx="30" ry="8" fill="#4dabf7" opacity="0.8"/>
+                        <ellipse cx="200" cy="200" rx="30" ry="8" fill="#748ffc" opacity="0.8"/>
+                        <ellipse cx="200" cy="220" rx="30" ry="8" fill="#4dabf7" opacity="0.8"/>
+                    </g>
+                    
+                    <!-- Blood Type Labels -->
+                    <text x="200" y="200" text-anchor="middle" fill="white" font-size="48" font-weight="bold">AB</text>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         PENGENALAN SECTION
+         ============================================ -->
+    <section class="section intro-section">
+        <div class="container">
+            <div class="intro-content fade-in">
+                <h2 class="section-title">Mengapa Mempelajari Golongan Darah?</h2>
+                <p class="intro-text">
+                    Golongan darah adalah salah satu topik penting dalam genetika yang memiliki aplikasi praktis dalam kehidupan sehari-hari. 
+                    Pemahaman tentang golongan darah tidak hanya penting untuk keperluan medis seperti transfusi darah dan transplantasi organ, 
+                    tetapi juga memberikan wawasan mendalam tentang bagaimana sifat genetik diwariskan dari orang tua kepada anak.
+                </p>
+                
+                <div class="importance-grid">
+                    <div class="importance-card">
+                        <div class="importance-icon">🏥</div>
+                        <h3>Aplikasi Medis</h3>
+                        <p>Golongan darah sangat penting dalam transfusi darah, transplantasi organ, dan diagnosis penyakit tertentu. Kesalahan dalam pencocokan golongan darah dapat berakibat fatal.</p>
+                    </div>
+                    
+                    <div class="importance-card">
+                        <div class="importance-icon">👨‍👩‍👧‍👦</div>
+                        <h3>Perencanaan Keluarga</h3>
+                        <p>Memahami pewarisan golongan darah membantu dalam memahami kemungkinan golongan darah anak dan potensi masalah kesehatan seperti ketidakcocokan Rhesus.</p>
+                    </div>
+                    
+                    <div class="importance-card">
+                        <div class="importance-icon">🔬</div>
+                        <h3>Penelitian Genetika</h3>
+                        <p>Golongan darah menjadi model klasik dalam mempelajari pola pewarisan genetik, termasuk konsep alel multipel dan kodominansi.</p>
+                    </div>
+                    
+                    <div class="importance-card">
+                        <div class="importance-icon">🌍</div>
+                        <h3>Antropologi</h3>
+                        <p>Distribusi golongan darah berbeda di berbagai populasi dunia, memberikan informasi tentang migrasi dan evolusi manusia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         KONSEP DASAR SECTION
+         ============================================ -->
+    <section class="section konsep-section" id="konsep">
+        <div class="container">
+    <!-- ============================================
+         SIMULASI SECTION
+         ============================================ -->
+    <section class="section simulasi-section" id="simulasi">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Simulasi Pewarisan Golongan Darah</h2>
+                <p class="section-subtitle">Hitung kemungkinan golongan darah anak berdasarkan golongan darah orang tua</p>
+            </div>
+
+            <div class="simulator-container fade-in">
+                <div class="simulator-card">
+                    <div class="simulator-inputs">
+                        <div class="parent-input">
+                            <h3>👨 Golongan Darah Ayah</h3>
+                            <div class="input-group">
+                                <label for="fatherBlood">Golongan ABO</label>
+                                <select id="fatherBlood" class="blood-select">
+                                    <option value="">Pilih Golongan</option>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="AB">AB</option>
+                                    <option value="O">O</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="fatherRh">Rhesus</label>
+                                <select id="fatherRh" class="blood-select">
+                                    <option value="">Pilih Rhesus</option>
+                                    <option value="positive">Positif (+)</option>
+                                    <option value="negative">Negatif (-)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="cross-symbol">×</div>
+
+                        <div class="parent-input">
+                            <h3>👩 Golongan Darah Ibu</h3>
+                            <div class="input-group">
+                                <label for="motherBlood">Golongan ABO</label>
+                                <select id="motherBlood" class="blood-select">
+                                    <option value="">Pilih Golongan</option>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="AB">AB</option>
+                                    <option value="O">O</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="motherRh">Rhesus</label>
+                                <select id="motherRh" class="blood-select">
+                                    <option value="">Pilih Rhesus</option>
+                                    <option value="positive">Positif (+)</option>
+                                    <option value="negative">Negatif (-)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary btn-calculate" id="calculateBtn" onclick="calculateInheritance()">
+                        🧬 Hitung Kemungkinan
+                    </button>
+
+                    <div class="simulator-results" id="simulatorResults" style="display: none;">
+                        <h3>Hasil Simulasi</h3>
+                        <div id="resultsContent"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         KUIS SECTION
+         ============================================ -->
+    <section class="section kuis-section" id="kuis">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Kuis Interaktif</h2>
+                <p class="section-subtitle">Uji pemahaman Anda tentang golongan darah dan genetika</p>
+            </div>
+
+            <div class="quiz-container fade-in">
+                <div class="quiz-card" id="quizCard">
+                    <div class="quiz-header">
+                        <div class="quiz-progress">
+                            <span id="questionNumber">Pertanyaan 1</span>
+                            <span id="questionTotal">dari 10</span>
+                        </div>
+                        <div class="quiz-score" id="quizScore" style="display: none;">
+                            Skor: <span id="scoreValue">0</span>/10
+                        </div>
+                    </div>
+
+                    <div class="quiz-content" id="quizContent">
+                        <h3 class="quiz-question" id="questionText"></h3>
+                        <div class="quiz-options" id="quizOptions"></div>
+                    </div>
+
+                    <div class="quiz-buttons">
+                        <button class="btn btn-secondary" id="prevBtn" onclick="previousQuestion()" style="display: none;">
+                            ← Sebelumnya
+                        </button>
+                        <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()">
+                            Selanjutnya →
+                        </button>
+                        <button class="btn btn-primary" id="submitBtn" onclick="submitQuiz()" style="display: none;">
+                            ✓ Lihat Hasil
+                        </button>
+                        <button class="btn btn-secondary" id="restartBtn" onclick="restartQuiz()" style="display: none;">
+                            🔄 Ulangi Kuis
+                        </button>
+                    </div>
+
+                    <div class="quiz-explanation" id="quizExplanation" style="display: none;"></div>
+                </div>
+
+                <div class="quiz-results" id="quizResults" style="display: none;">
+                    <div class="results-card">
+                        <div class="results-icon" id="resultsIcon"></div>
+                        <h3 id="resultsTitle"></h3>
+                        <div class="results-score">
+                            <div class="score-circle">
+                                <span id="finalScore">0</span>
+                                <span class="score-total">/10</span>
+                            </div>
+                        </div>
+                        <p id="resultsMessage"></p>
+                        <div class="results-breakdown" id="resultsBreakdown"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         KONTAK SECTION
+         ============================================ -->
+    <section class="section kontak-section" id="kontak">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Hubungi Kami</h2>
+                <p class="section-subtitle">Ada pertanyaan? Kirimkan pesan kepada kami</p>
+            </div>
+
+            <div class="contact-container fade-in">
+                <div class="contact-info">
+                    <h3>Informasi Kontak</h3>
+                    <div class="info-item">
+                        <span class="info-icon">📧</span>
+                        <div>
+                            <strong>Email</strong>
+                            <p>genetikalab@education.id</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">📱</span>
+                        <div>
+                            <strong>Telepon</strong>
+                            <p>+62 812-5717-7241</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">🏫</span>
+                        <div>
+                            <strong>Alamat</strong>
+                            <p>Jl. Jl. Brigjen Jl. Brigjend H. Hasan Basri<br>Banjarmasin, Indonesia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="contactName">Nama Lengkap</label>
+                        <input type="text" id="contactName" name="name" required placeholder="Masukkan nama Anda">
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactEmail">Email</label>
+                        <input type="email" id="contactEmail" name="email" required placeholder="nama@email.com">
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactMessage">Pesan</label>
+                        <textarea id="contactMessage" name="message" rows="5" required placeholder="Tulis pesan Anda..."></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+
+                    <div class="form-success" id="formSuccess" style="display: none;">
+                        ✓ Pesan berhasil dikirim! Kami akan segera menghubungi Anda.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>GenetikaLab</h4>
+                    <p>Platform pembelajaran interaktif untuk memahami genetika golongan darah dengan cara yang menyenangkan dan mudah dipahami.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="#beranda">Beranda</a></li>
+                        <li><a href="#konsep">Konsep</a></li>
+                        <li><a href="#pewarisan">Pewarisan</a></li>
+                        <li><a href="#simulasi">Simulasi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Bantuan</h4>
+                    <ul>
+                        <li><a href="#kuis">Kuis</a></li>
+                        <li><a href="#kontak">Kontak</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Panduan</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GenetikaLab. Dibuat untuk tujuan edukasi. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()" aria-label="Scroll to top">↑</button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html> fade-in">
+                <h2 class="section-title">Konsep Dasar Golongan Darah</h2>
+                <p class="section-subtitle">Memahami sistem ABO dan komponen genetikanya</p>
+            </div>
+
+            <!-- Pengenalan -->
+            <div class="content-card fade-in">
+                <div class="card-icon">🩸</div>
+                <h3>Apa itu Golongan Darah?</h3>
+                <p>
+                    Golongan darah adalah klasifikasi darah berdasarkan ada atau tidaknya antigen (protein spesifik) pada permukaan sel darah merah 
+                    dan antibodi dalam plasma darah. Sistem golongan darah yang paling penting dan banyak digunakan adalah:
+                </p>
+                <ul class="info-list">
+                    <li><strong>Sistem ABO:</strong> Dikembangkan oleh Karl Landsteiner pada tahun 1900, mengelompokkan darah menjadi A, B, AB, dan O</li>
+                    <li><strong>Sistem Rhesus (Rh):</strong> Ditemukan pada tahun 1940, membedakan darah menjadi Rh positif (+) dan Rh negatif (-)</li>
+                    <li><strong>Sistem lainnya:</strong> MN, Kell, Duffy, dan lebih dari 30 sistem golongan darah lainnya yang kurang umum</li>
+                </ul>
+            </div>
+
+            <!-- Sejarah Singkat -->
+            <div class="history-section fade-in">
+                <h3 class="subsection-title">Sejarah Penemuan Golongan Darah</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">1900</div>
+                        <div class="timeline-content">
+                            <h4>Karl Landsteiner menemukan sistem ABO</h4>
+                            <p>Penemuan ini merevolusi transfusi darah dan menyelamatkan jutaan nyawa. Landsteiner menerima Nobel Prize tahun 1930.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1940</div>
+                        <div class="timeline-content">
+                            <h4>Penemuan Faktor Rhesus</h4>
+                            <p>Landsteiner dan Wiener menemukan faktor Rh setelah percobaan dengan darah kera Rhesus.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1924</div>
+                        <div class="timeline-content">
+                            <h4>Pembuktian Pewarisan Genetik</h4>
+                            <p>Felix Bernstein membuktikan bahwa golongan darah diwariskan secara genetik mengikuti hukum Mendel.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sistem ABO -->
+            <div class="abo-system fade-in">
+                <h3 class="subsection-title">Sistem ABO: Empat Golongan Darah Utama</h3>
+                <div class="blood-types-grid">
+                    <!-- Golongan A -->
+                    <div class="blood-card">
+                        <div class="blood-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">A</div>
+                        <h4>Golongan A</h4>
+                        <div class="blood-info">
+                            <p><strong>Antigen:</strong> A pada sel darah merah</p>
+                            <p><strong>Antibodi:</strong> Anti-B dalam plasma</p>
+                            <p><strong>Genotipe:</strong> I<sup>A</sup>I<sup>A</sup> atau I<sup>A</sup>i</p>
+                            <p><strong>Dapat menerima dari:</strong> A dan O</p>
+                            <p><strong>Dapat donor ke:</strong> A dan AB</p>
+                            <p><strong>Prevalensi global:</strong> ±40%</p>
+                        </div>
+                    </div>
+
+                    <!-- Golongan B -->
+                    <div class="blood-card">
+                        <div class="blood-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">B</div>
+                        <h4>Golongan B</h4>
+                        <div class="blood-info">
+                            <p><strong>Antigen:</strong> B pada sel darah merah</p>
+                            <p><strong>Antibodi:</strong> Anti-A dalam plasma</p>
+                            <p><strong>Genotipe:</strong> I<sup>B</sup>I<sup>B</sup> atau I<sup>B</sup>i</p>
+                            <p><strong>Dapat menerima dari:</strong> B dan O</p>
+                            <p><strong>Dapat donor ke:</strong> B dan AB</p>
+                            <p><strong>Prevalensi global:</strong> ±11%</p>
+                        </div>
+                    </div>
+
+                    <!-- Golongan AB -->
+                    <div class="blood-card">
+                        <div class="blood-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">AB</div>
+                        <h4>Golongan AB</h4>
+                        <div class="blood-info">
+                            <p><strong>Antigen:</strong> A dan B</p>
+                            <p><strong>Antibodi:</strong> Tidak ada</p>
+                            <p><strong>Genotipe:</strong> I<sup>A</sup>I<sup>B</sup></p>
+                            <p><strong>Dapat menerima dari:</strong> Semua golongan (Resipien Universal)</p>
+                            <p><strong>Dapat donor ke:</strong> Hanya AB</p>
+                            <p><strong>Prevalensi global:</strong> ±4% (paling langka)</p>
+                        </div>
+                    </div>
+
+                    <!-- Golongan O -->
+                    <div class="blood-card">
+                        <div class="blood-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">O</div>
+                        <h4>Golongan O</h4>
+                        <div class="blood-info">
+                            <p><strong>Antigen:</strong> Tidak ada</p>
+                            <p><strong>Antibodi:</strong> Anti-A dan Anti-B</p>
+                            <p><strong>Genotipe:</strong> ii (homozigot resesif)</p>
+                            <p><strong>Dapat menerima dari:</strong> Hanya O</p>
+                            <p><strong>Dapat donor ke:</strong> Semua golongan (Donor Universal)</p>
+                            <p><strong>Prevalensi global:</strong> ±45% (paling umum)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Diagram Antigen-Antibodi -->
+            <div class="diagram-section fade-in">
+                <h3 class="subsection-title">Antigen dan Antibodi: Kunci Kompatibilitas</h3>
+                <div class="diagram-container">
+                    <div class="diagram-card">
+                        <h4>🔴 Antigen (Aglutinogen)</h4>
+                        <p>Protein glikoprotein pada permukaan sel darah merah yang menentukan golongan darah. Antigen berfungsi sebagai "penanda identitas" sel.</p>
+                        <ul class="info-list">
+                            <li><strong>Antigen A:</strong> Terdapat pada golongan A dan AB</li>
+                            <li><strong>Antigen B:</strong> Terdapat pada golongan B dan AB</li>
+                            <li><strong>Antigen A & B:</strong> Keduanya ada pada golongan AB</li>
+                            <li><strong>Tanpa antigen:</strong> Golongan O tidak memiliki antigen A atau B</li>
+                        </ul>
+                        <div class="note-box">
+                            <strong>📝 Catatan:</strong> Antigen A dan B disintesis oleh enzim yang dikode oleh gen pada kromosom 9.
+                        </div>
+                    </div>
+                    
+                    <div class="diagram-card">
+                        <h4>⚪ Antibodi (Aglutinin)</h4>
+                        <p>Protein immunoglobulin dalam plasma darah yang melawan antigen asing. Antibodi terbentuk secara alami tanpa paparan sebelumnya.</p>
+                        <ul class="info-list">
+                            <li><strong>Anti-B (pada golongan A):</strong> Menyerang sel dengan antigen B</li>
+                            <li><strong>Anti-A (pada golongan B):</strong> Menyerang sel dengan antigen A</li>
+                            <li><strong>Tanpa antibodi (golongan AB):</strong> Dapat menerima semua golongan</li>
+                            <li><strong>Anti-A & Anti-B (golongan O):</strong> Hanya bisa menerima golongan O</li>
+                        </ul>
+                        <div class="note-box">
+                            <strong>⚠️ Penting:</strong> Ketidakcocokan antigen-antibodi menyebabkan aglutinasi (penggumpalan) yang berbahaya.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visualisasi Reaksi Aglutinasi -->
+                <div class="aglutination-demo fade-in">
+                    <h4>Visualisasi Reaksi Aglutinasi</h4>
+                    <div class="demo-container">
+                        <div class="demo-item compatible">
+                            <h5>✅ Kompatibel (Tidak ada reaksi)</h5>
+                            <div class="demo-visual">
+                                <div class="cell">A</div>
+                                <span>+</span>
+                                <div class="antibody">Anti-B</div>
+                                <span>=</span>
+                                <div class="result-safe">Aman</div>
+                            </div>
+                            <p>Sel darah merah dengan antigen A tidak bereaksi dengan antibodi Anti-B</p>
+                        </div>
+
+                        <div class="demo-item incompatible">
+                            <h5>❌ Tidak Kompatibel (Aglutinasi)</h5>
+                            <div class="demo-visual">
+                                <div class="cell">A</div>
+                                <span>+</span>
+                                <div class="antibody">Anti-A</div>
+                                <span>=</span>
+                                <div class="result-danger">Berbahaya</div>
+                            </div>
+                            <p>Sel darah merah dengan antigen A bereaksi dengan antibodi Anti-A menyebabkan penggumpalan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabel Kompatibilitas Transfusi -->
+            <div class="compatibility-section fade-in">
+                <h3 class="subsection-title">Tabel Kompatibilitas Transfusi Darah</h3>
+                <div class="compatibility-table-wrapper">
+                    <table class="compatibility-table">
+                        <thead>
+                            <tr>
+                                <th>Resipien<br>(Penerima)</th>
+                                <th colspan="4">Donor</th>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th>A</th>
+                                <th>B</th>
+                                <th>AB</th>
+                                <th>O</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>A</th>
+                                <td class="compatible">✓</td>
+                                <td class="incompatible">✗</td>
+                                <td class="incompatible">✗</td>
+                                <td class="compatible">✓</td>
+                            </tr>
+                            <tr>
+                                <th>B</th>
+                                <td class="incompatible">✗</td>
+                                <td class="compatible">✓</td>
+                                <td class="incompatible">✗</td>
+                                <td class="compatible">✓</td>
+                            </tr>
+                            <tr>
+                                <th>AB</th>
+                                <td class="compatible">✓</td>
+                                <td class="compatible">✓</td>
+                                <td class="compatible">✓</td>
+                                <td class="compatible">✓</td>
+                            </tr>
+                            <tr>
+                                <th>O</th>
+                                <td class="incompatible">✗</td>
+                                <td class="incompatible">✗</td>
+                                <td class="incompatible">✗</td>
+                                <td class="compatible">✓</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-legend">
+                    <div class="legend-item">
+                        <span class="legend-icon compatible">✓</span>
+                        <span>Kompatibel (Aman untuk transfusi)</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-icon incompatible">✗</span>
+                        <span>Tidak kompatibel (Berbahaya)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sistem Rhesus -->
+            <div class="rhesus-section fade-in">
+                <h3 class="subsection-title">Sistem Rhesus (Rh): Faktor D</h3>
+                <p class="subsection-description">
+                    Sistem Rhesus adalah sistem golongan darah kedua yang paling penting setelah ABO. Dinamakan Rhesus karena pertama kali 
+                    ditemukan pada kera Rhesus. Faktor Rh ditentukan oleh ada tidaknya antigen D pada permukaan sel darah merah.
+                </p>
+                
+                <div class="rhesus-grid">
+                    <div class="rhesus-card positive">
+                        <div class="rhesus-icon">Rh+</div>
+                        <h4>Rhesus Positif</h4>
+                        <p>Memiliki antigen D pada permukaan sel darah merah. Sekitar 85% populasi dunia memiliki Rh positif.</p>
+                        <div class="genetic-details">
+                            <p class="genetic-note"><strong>Genotipe:</strong> DD (homozigot dominan) atau Dd (heterozigot)</p>
+                            <p><strong>Sifat:</strong> Dominan</p>
+                            <p><strong>Prevalensi:</strong> ±85% populasi</p>
+                        </div>
+                    </div>
+                    
+                    <div class="rhesus-card negative">
+                        <div class="rhesus-icon">Rh-</div>
+                        <h4>Rhesus Negatif</h4>
+                        <p>Tidak memiliki antigen D pada permukaan sel darah merah. Lebih langka, hanya sekitar 15% populasi.</p>
+                        <div class="genetic-details">
+                            <p class="genetic-note"><strong>Genotipe:</strong> dd (homozigot resesif)</p>
+                            <p><strong>Sifat:</strong> Resesif</p>
+                            <p><strong>Prevalensi:</strong> ±15% populasi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Penyakit Hemolitik -->
+                <div class="disease-warning">
+                    <h4>⚠️ Penyakit Hemolitik pada Bayi Baru Lahir (HDN)</h4>
+                    <p>
+                        Ketidakcocokan Rhesus antara ibu (Rh-) dan janin (Rh+) dapat menyebabkan komplikasi serius. 
+                        Pada kehamilan pertama biasanya tidak bermasalah, tetapi pada kehamilan kedua, antibodi ibu dapat menyerang sel darah merah janin.
+                    </p>
+                    <div class="hdn-process">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <h5>Kehamilan Pertama</h5>
+                            <p>Ibu Rh- hamil bayi Rh+. Saat persalinan, darah janin masuk ke sirkulasi ibu, memicu pembentukan antibodi Anti-D.</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <h5>Sensitisasi</h5>
+                            <p>Sistem imun ibu "mengingat" antigen Rh+ dan memproduksi antibodi Anti-D yang bertahan seumur hidup.</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <h5>Kehamilan Kedua</h5>
+                            <p>Jika hamil bayi Rh+ lagi, antibodi Anti-D ibu melewati plasenta dan menyerang sel darah merah janin.</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <h5>Pencegahan</h5>
+                            <p>Injeksi RhoGAM (imunoglobulin Anti-D) diberikan pada ibu Rh- untuk mencegah pembentukan antibodi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Golongan Darah Langka -->
+            <div class="rare-blood-section fade-in">
+                <h3 class="subsection-title">Golongan Darah Langka dan Unik</h3>
+                <div class="rare-blood-grid">
+                    <div class="rare-blood-card">
+                        <h4>🩸 Bombay Blood Group (hh)</h4>
+                        <p>
+                            Golongan darah paling langka di dunia, ditemukan pertama kali di Mumbai (Bombay), India. 
+                            Individu dengan golongan ini tidak memiliki antigen H (prekursor A dan B), sehingga terlihat seperti golongan O 
+                            tetapi sebenarnya berbeda secara genetik. Prevalensi: 1 dari 10.000 orang di India, lebih langka di tempat lain.
+                        </p>
+                    </div>
+                    
+                    <div class="rare-blood-card">
+                        <h4>💎 Rh-null (Golden Blood)</h4>
+                        <p>
+                            Disebut "darah emas" karena sangat langka. Tidak memiliki semua 61 antigen dalam sistem Rhesus. 
+                            Hanya sekitar 50 orang di dunia yang diketahui memiliki golongan darah ini. Sangat berharga untuk transfusi 
+                            karena dapat diberikan ke siapa saja dengan gangguan Rhesus langka.
+                        </p>
+                    </div>
+                    
+                    <div class="rare-blood-card">
+                        <h4>🌟 AB Negatif</h4>
+                        <p>
+                            Golongan darah paling langka dalam sistem ABO-Rh standar. Hanya 1% populasi yang memilikinya. 
+                            Resipien universal untuk plasma (dapat menerima plasma dari semua golongan), tetapi hanya dapat menerima 
+                            sel darah merah dari AB+ atau AB-.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         PEWARISAN SECTION
+         ============================================ -->
+    <section class="section pewarisan-section" id="pewarisan">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Pewarisan Golongan Darah</h2>
+                <p class="section-subtitle">Memahami genetika di balik pewarisan golongan darah dari orang tua ke anak</p>
+            </div>
+
+            <!-- Dasar Genetika -->
+            <div class="genetics-basics fade-in">
+                <h3 class="subsection-title">Dasar-dasar Genetika Golongan Darah</h3>
+                <div class="basics-content">
+                    <div class="basics-text">
+                        <p>
+                            Golongan darah ABO diwariskan mengikuti pola genetika Mendel dengan beberapa keunikan:
+                        </p>
+                        <ul class="detailed-list">
+                            <li><strong>Alel Multipel:</strong> Gen golongan darah memiliki tiga alel berbeda (I<sup>A</sup>, I<sup>B</sup>, i) meskipun setiap individu hanya memiliki dua alel.</li>
+                            <li><strong>Kodominansi:</strong> Alel I<sup>A</sup> dan I<sup>B</sup> bersifat kodominan, keduanya terekspresikan pada golongan AB.</li>
+                            <li><strong>Dominansi:</strong> Alel I<sup>A</sup> dan I<sup>B</sup> dominan terhadap alel i (resesif).</li>
+                            <li><strong>Lokasi Gen:</strong> Gen ABO terletak pada kromosom 9 (autosomal), bukan kromosom seks.</li>
+                        </ul>
+                    </div>
+                    <div class="basics-diagram">
+                        <svg viewBox="0 0 300 200" class="genetics-svg">
+                            <rect x="50" y="30" width="200" height="40" fill="#667eea" rx="5"/>
+                            <text x="150" y="55" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Kromosom 9</text>
+                            
+                            <rect x="70" y="90" width="60" height="30" fill="#4dabf7" rx="3"/>
+                            <text x="100" y="110" text-anchor="middle" fill="white" font-size="14">I<tspan baseline-shift="super" font-size="10">A</tspan></text>
+                            
+                            <rect x="140" y="90" width="60" height="30" fill="#f5576c" rx="3"/>
+                            <text x="170" y="110" text-anchor="middle" fill="white" font-size="14">I<tspan baseline-shift="super" font-size="10">B</tspan></text>
+                            
+                            <rect x="210" y="90" width="60" height="30" fill="#868e96" rx="3"/>
+                            <text x="240" y="110" text-anchor="middle" fill="white" font-size="14">i</text>
+                            
+                            <text x="150" y="150" text-anchor="middle" font-size="12" fill="#495057">Tiga Alel Golongan Darah</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Genotipe vs Fenotipe -->
+            <div class="concept-comparison fade-in">
+                <div class="comparison-card">
+                    <div class="comparison-icon">🧬</div>
+                    <h3>Genotipe</h3>
+                    <p>Susunan genetik yang sebenarnya - kombinasi alel yang dimiliki individu pada lokus gen tertentu.</p>
+                    <div class="example-box">
+                        <strong>Contoh Genotipe:</strong>
+                        <ul>
+                            <li><code>I<sup>A</sup>I<sup>A</sup></code> - Homozigot dominan A</li>
+                            <li><code>I<sup>A</sup>i</code> - Heterozigot A</li>
+                            <li><code>I<sup>B</sup>I<sup>B</sup></code> - Homozigot dominan B</li>
+                            <li><code>I<sup>B</sup>i</code> - Heterozigot B</li>
+                            <li><code>I<sup>A</sup>I<sup>B</sup></code> - Kodominan AB</li>
+                            <li><code>ii</code> - Homozigot resesif O</li>
+                        </ul>
+                        <div class="note-box">
+                            💡 <strong>Penting:</strong> Dua genotipe berbeda bisa menghasilkan fenotipe yang sama (I<sup>A</sup>I<sup>A</sup> dan I<sup>A</sup>i sama-sama golongan A).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comparison-card">
+                    <div class="comparison-icon">🩸</div>
+                    <h3>Fenotipe</h3>
+                    <p>Sifat yang dapat diamati atau diukur - dalam hal ini adalah golongan darah yang muncul secara fisik.</p>
+                    <div class="example-box">
+                        <strong>Contoh Fenotipe:</strong>
+                        <ul>
+                            <li><code>I<sup>A</sup>I<sup>A</sup></code> atau <code>I<sup>A</sup>i</code> → <span class="blood-badge" style="background: #667eea;">Golongan A</span></li>
+                            <li><code>I<sup>B</sup>I<sup>B</sup></code> atau <code>I<sup>B</sup>i</code> → <span class="blood-badge" style="background: #f5576c;">Golongan B</span></li>
+                            <li><code>I<sup>A</sup>I<sup>B</sup></code> → <span class="blood-badge" style="background: #4dabf7;">Golongan AB</span></li>
+                            <li><code>ii</code> → <span class="blood-badge" style="background: #fa709a;">Golongan O</span></li>
+                        </ul>
+                        <div class="note-box">
+                            📝 <strong>Catatan:</strong> Fenotipe adalah hasil ekspresi genotipe yang dapat kita lihat atau uji di laboratorium.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hukum Mendel -->
+            <div class="mendel-laws fade-in">
+                <h3 class="subsection-title">Hukum Mendel dalam Pewarisan Golongan Darah</h3>
+                <div class="laws-grid">
+                    <div class="law-card">
+                        <h4>⚖️ Hukum Segregasi (Mendel I)</h4>
+                        <p>
+                            Setiap individu memiliki sepasang alel untuk setiap gen. Saat pembentukan gamet (sel kelamin), 
+                            pasangan alel ini berpisah secara acak sehingga setiap gamet hanya membawa satu alel.
+                        </p>
+                        <div class="law-example">
+                            <strong>Contoh:</strong>
+                            <p>Orang tua dengan genotipe I<sup>A</sup>i akan menghasilkan 50% gamet I<sup>A</sup> dan 50% gamet i</p>
+                        </div>
+                    </div>
+                    
+                    <div class="law-card">
+                        <h4>🎲 Hukum Asortasi Bebas (Mendel II)</h4>
+                        <p>
+                            Pewarisan satu gen tidak mempengaruhi pewarisan gen lain yang terletak pada kromosom berbeda. 
+                            Gen ABO dan gen Rhesus diwariskan secara independen.
+                        </p>
+                        <div class="law-example">
+                            <strong>Contoh:</strong>
+                            <p>Golongan darah ABO (kromosom 9) dan Rhesus (kromosom 1) diwariskan terpisah</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Punnett Square Examples -->
+            <div class="punnett-section fade-in">
+                <h3 class="subsection-title">Punnett Square: Memprediksi Pewarisan</h3>
+                <p class="subsection-description">
+                    Punnett Square adalah diagram yang digunakan untuk memprediksi kemungkinan genotipe dan fenotipe keturunan 
+                    dari suatu persilangan. Mari kita lihat beberapa contoh persilangan golongan darah:
+                </p>
+                
+                <div class="punnett-examples">
+                    <!-- Example 1 -->
+                    <div class="punnett-card">
+                        <h4>📊 Contoh 1: Persilangan Heterozigot</h4>
+                        <div class="parents-info">
+                            <div class="parent">
+                                <span class="parent-icon">👨</span>
+                                <div>
+                                    <strong>Ayah:</strong> Golongan A (I<sup>A</sup>i)<br>
+                                    <small>Heterozigot - membawa alel resesif</small>
+                                </div>
+                            </div>
+                            <span class="cross-symbol">×</span>
+                            <div class="parent">
+                                <span class="parent-icon">👩</span>
+                                <div>
+                                    <strong>Ibu:</strong> Golongan B (I<sup>B</sup>i)<br>
+                                    <small>Heterozigot - membawa alel resesif</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="punnett-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="corner"></th>
+                                        <th>I<sup>A</sup><br><small>(dari ayah)</small></th>
+                                        <th>i<br><small>(dari ayah)</small></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>I<sup>B</sup><br><small>(dari ibu)</small></th>
+                                        <td class="result-cell">
+                                            I<sup>A</sup>I<sup>B</sup><br>
+                                            <span class="phenotype">AB</span>
+                                        </td>
+                                        <td class="result-cell">
+                                            I<sup>B</sup>i<br>
+                                            <span class="phenotype">B</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>i<br><small>(dari ibu)</small></th>
+                                        <td class="result-cell">
+                                            I<sup>A</sup>i<br>
+                                            <span class="phenotype">A</span>
+                                        </td>
+                                        <td class="result-cell">
+                                            ii<br>
+                                            <span class="phenotype">O</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="punnett-result">
+                            <strong>📈 Hasil Kemungkinan Anak:</strong>
+                            <div class="probability-bars">
+                                <div class="prob-item">
+                                    <span>AB</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 25%; background: #4dabf7;">25%</div>
+                                    </div>
+                                    <span>25%</span>
+                                </div>
+                                <div class="prob-item">
+                                    <span>A</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 25%; background: #667eea;">25%</div>
+                                    </div>
+                                    <span>25%</span>
+                                </div>
+                                <div class="prob-item">
+                                    <span>B</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 25%; background: #f5576c;">25%</div>
+                                    </div>
+                                    <span>25%</span>
+                                </div>
+                                <div class="prob-item">
+                                    <span>O</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 25%; background: #fa709a;">25%</div>
+                                    </div>
+                                    <span>25%</span>
+                                </div>
+                            </div>
+                            <div class="conclusion">
+                                <strong>✨ Kesimpulan:</strong> Ini adalah satu-satunya kombinasi orang tua yang dapat menghasilkan 
+                                keempat golongan darah (A, B, AB, O) dengan probabilitas sama!
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Example 2 -->
+                    <div class="punnett-card">
+                        <h4>📊 Contoh 2: Persilangan Kodominan dengan Resesif</h4>
+                        <div class="parents-info">
+                            <div class="parent">
+                                <span class="parent-icon">👨</span>
+                                <div>
+                                    <strong>Ayah:</strong> Golongan AB (I<sup>A</sup>I<sup>B</sup>)<br>
+                                    <small>Kodominan - kedua alel dominan</small>
+                                </div>
+                            </div>
+                            <span class="cross-symbol">×</span>
+                            <div class="parent">
+                                <span class="parent-icon">👩</span>
+                                <div>
+                                    <strong>Ibu:</strong> Golongan O (ii)<br>
+                                    <small>Homozigot resesif</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="punnett-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="corner"></th>
+                                        <th>I<sup>A</sup><br><small>(dari ayah)</small></th>
+                                        <th>I<sup>B</sup><br><small>(dari ayah)</small></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>i<br><small>(dari ibu)</small></th>
+                                        <td class="result-cell">
+                                            I<sup>A</sup>i<br>
+                                            <span class="phenotype">A</span>
+                                        </td>
+                                        <td class="result-cell">
+                                            I<sup>B</sup>i<br>
+                                            <span class="phenotype">B</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>i<br><small>(dari ibu)</small></th>
+                                        <td class="result-cell">
+                                            I<sup>A</sup>i<br>
+                                            <span class="phenotype">A</span>
+                                        </td>
+                                        <td class="result-cell">
+                                            I<sup>B</sup>i<br>
+                                            <span class="phenotype">B</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="punnett-result">
+                            <strong>📈 Hasil Kemungkinan Anak:</strong>
+                            <div class="probability-bars">
+                                <div class="prob-item">
+                                    <span>A</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 50%; background: #667eea;">50%</div>
+                                    </div>
+                                    <span>50%</span>
+                                </div>
+                                <div class="prob-item">
+                                    <span>B</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 50%; background: #f5576c;">50%</div>
+                                    </div>
+                                    <span>50%</span>
+                                </div>
+                            </div>
+                            <div class="conclusion">
+                                <strong>🔍 Catatan Penting:</strong> Orang tua dengan golongan AB <strong>tidak mungkin</strong> 
+                                memiliki anak bergolongan O, dan orang tua golongan O <strong>tidak mungkin</strong> memiliki anak golongan AB.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Example 3 -->
+                    <div class="punnett-card">
+                        <h4>📊 Contoh 3: Persilangan Homozigot</h4>
+                        <div class="parents-info">
+                            <div class="parent">
+                                <span class="parent-icon">👨</span>
+                                <div>
+                                    <strong>Ayah:</strong> Golongan A (I<sup>A</sup>I<sup>A</sup>)<br>
+                                    <small>Homozigot dominan</small>
+                                </div>
+                            </div>
+                            <span class="cross-symbol">×</span>
+                            <div class="parent">
+                                <span class="parent-icon">👩</span>
+                                <div>
+                                    <strong>Ibu:</strong> Golongan B (I<sup>B</sup>I<sup>B</sup>)<br>
+                                    <small>Homozigot dominan</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="punnett-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="corner"></th>
+                                        <th>I<sup>A</sup></th>
+                                        <th>I<sup>A</sup></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>I<sup>B</sup></th>
+                                        <td class="result-cell">
+                                            I<sup>A</sup>I<sup>B</sup><br>
+                                            <span class="phenotype">AB</span>
+                                        </td>
+                                        <td class="result-cell">
+                                            I<sup>A</sup>I<sup>B</sup><br>
+                                            <span class="phenotype">AB</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>I<sup>B</sup></th>
+                                        <td class="result-cell">
+                                            I<sup>A</sup>I<sup>B</sup><br>
+                                            <span class="phenotype">AB</span>
+                                        </td>
+                                        <td class="result-cell">
+                                            I<sup>A</sup>I<sup>B</sup><br>
+                                            <span class="phenotype">AB</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="punnett-result">
+                            <strong>📈 Hasil Kemungkinan Anak:</strong>
+                            <div class="probability-bars">
+                                <div class="prob-item">
+                                    <span>AB</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 100%; background: #4dabf7;">100%</div>
+                                    </div>
+                                    <span>100%</span>
+                                </div>
+                            </div>
+                            <div class="conclusion">
+                                <strong>💯 Kesimpulan:</strong> Semua anak pasti bergolongan AB karena kedua orang tua homozigot 
+                                untuk alel yang berbeda, menunjukkan kodominansi sempurna.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rhesus Inheritance -->
+            <div class="rhesus-inheritance fade-in">
+                <h3 class="subsection-title">Pewarisan Rhesus: Pola Dominansi Sederhana</h3>
+                <p class="subsection-description">
+                    Berbeda dengan sistem ABO yang kompleks, pewarisan Rhesus mengikuti pola dominansi sederhana. 
+                    Alel Rh positif (D) bersifat dominan terhadap Rh negatif (d).
+                </p>
+                
+                <div class="rhesus-info-grid">
+                    <div class="info-card">
+                        <h4>🧬 Genotipe dan Fenotipe Rhesus</h4>
+                        <table class="genotype-table">
+                            <thead>
+                                <tr>
+                                    <th>Genotipe</th>
+                                    <th>Fenotipe</th>
+                                    <th>Keterangan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>DD</code></td>
+                                    <td><span class="rh-badge positive">Rh+</span></td>
+                                    <td>Homozigot dominan</td>
+                                </tr>
+                                <tr>
+                                    <td><code>Dd</code></td>
+                                    <td><span class="rh-badge positive">Rh+</span></td>
+                                    <td>Heterozigot (carrier)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>dd</code></td>
+                                    <td><span class="rh-badge negative">Rh-</span></td>
+                                    <td>Homozigot resesif</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="note-box">
+                            📌 <strong>Penting:</strong> Seseorang dengan fenotipe Rh+ bisa memiliki genotipe DD atau Dd. 
+                            Hanya tes keturunan yang dapat membedakannya.
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>📊 Contoh Pewarisan Rhesus</h4>
+                        <div class="rhesus-example">
+                            <div class="example-header">
+                                <strong>Kasus: Ayah Rh+ (Dd) × Ibu Rh- (dd)</strong>
+                            </div>
+                            <div class="simple-punnett">
+                                <table class="mini-punnett">
+                                    <tr>
+                                        <th></th>
+                                        <th>D</th>
+                                        <th>d</th>
+                                    </tr>
+                                    <tr>
+                                        <th>d</th>
+                                        <td>Dd<br><small>Rh+</small></td>
+                                        <td>dd<br><small>Rh-</small></td>
+                                    </tr>
+                                    <tr>
+                                        <th>d</th>
+                                        <td>Dd<br><small>Rh+</small></td>
+                                        <td>dd<br><small>Rh-</small></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="example-result">
+                                <p><strong>Hasil:</strong></p>
+                                <ul>
+                                    <li>50% kemungkinan Rh+ (Dd)</li>
+                                    <li>50% kemungkinan Rh- (dd)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="warning-box">
+                            ⚠️ <strong>Perhatian Medis:</strong> Kombinasi ibu Rh- dengan ayah Rh+ berisiko HDN. 
+                            Konsultasi dengan dokter dan pemberian RhoGAM sangat penting!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Combined ABO and Rh -->
+                <div class="combined-inheritance">
+                    <h4>🔗 Pewarisan Kombinasi ABO dan Rhesus</h4>
+                    <p>
+                        Karena gen ABO dan Rhesus terletak pada kromosom yang berbeda, keduanya diwariskan secara independen. 
+                        Ini menghasilkan 8 kombinasi golongan darah lengkap:
+                    </p>
+                    <div class="blood-combinations">
+                        <div class="combo-item">A+</div>
+                        <div class="combo-item">A-</div>
+                        <div class="combo-item">B+</div>
+                        <div class="combo-item">B-</div>
+                        <div class="combo-item">AB+</div>
+                        <div class="combo-item">AB-</div>
+                        <div class="combo-item">O+</div>
+                        <div class="combo-item">O-</div>
+                    </div>
+                    
+                    <div class="example-combined">
+                        <strong>Contoh Perhitungan Lengkap:</strong>
+                        <p>Ayah A+ (I<sup>A</sup>i, Dd) × Ibu B- (I<sup>B</sup>i, dd)</p>
+                        <ul>
+                            <li>Kemungkinan ABO: A (25%), B (25%), AB (25%), O (25%)</li>
+                            <li>Kemungkinan Rh: Rh+ (50%), Rh- (50%)</li>
+                            <li><strong>Total kombinasi:</strong> 4 × 2 = 8 kemungkinan berbeda</li>
+                        </ul>
+                        <div class="combinations-detailed">
+                            <span class="combo-detail">A+ (12.5%)</span>
+                            <span class="combo-detail">A- (12.5%)</span>
+                            <span class="combo-detail">B+ (12.5%)</span>
+                            <span class="combo-detail">B- (12.5%)</span>
+                            <span class="combo-detail">AB+ (12.5%)</span>
+                            <span class="combo-detail">AB- (12.5%)</span>
+                            <span class="combo-detail">O+ (12.5%)</span>
+                            <span class="combo-detail">O- (12.5%)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Test Paternitas -->
+            <div class="paternity-section fade-in">
+                <h3 class="subsection-title">Tes Paternitas dengan Golongan Darah</h3>
+                <p class="subsection-description">
+                    Meskipun tes DNA jauh lebih akurat, golongan darah dapat digunakan untuk <strong>menyingkirkan</strong> 
+                    kemungkinan hubungan biologis, meskipun tidak bisa membuktikannya secara pasti.
+                </p>
+                
+                <div class="paternity-cases">
+                    <div class="case-card possible">
+                        <h4>✅ Kemungkinan Benar</h4>
+                        <div class="case-example">
+                            <p><strong>Kasus:</strong></p>
+                            <ul>
+                                <li>Ayah: Golongan A</li>
+                                <li>Ibu: Golongan B</li>
+                                <li>Anak: Golongan O</li>
+                            </ul>
+                            <p class="case-verdict">
+                                <strong>Kesimpulan:</strong> Mungkin benar jika ayah I<sup>A</sup>i dan ibu I<sup>B</sup>i (keduanya heterozigot)
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="case-card impossible">
+                        <h4>❌ Tidak Mungkin</h4>
+                        <div class="case-example">
+                            <p><strong>Kasus:</strong></p>
+                            <ul>
+                                <li>Ayah: Golongan O (ii)</li>
+                                <li>Ibu: Golongan O (ii)</li>
+                                <li>Anak: Golongan AB</li>
+                            </ul>
+                            <p class="case-verdict">
+                                <strong>Kesimpulan:</strong> Tidak mungkin secara genetik! Kedua orang tua O hanya bisa memiliki anak O.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="paternity-rules">
+                    <h4>📋 Aturan Penting Tes Paternitas</h4>
+                    <ul class="rules-list">
+                        <li>Kedua orang tua O (ii) <strong>hanya bisa</strong> memiliki anak O</li>
+                        <li>Orang tua AB <strong>tidak bisa</strong> memiliki anak O</li>
+                        <li>Orang tua O <strong>tidak bisa</strong> memiliki anak AB</li>
+                        <li>Jika salah satu orang tua AB, anak <strong>pasti</strong> memiliki antigen A atau B (tidak mungkin O)</li>
+                        <li>Golongan darah hanya bisa menyingkirkan, <strong>tidak bisa membuktikan</strong> paternitas</li>
+                    </ul>
+                    <div class="warning-box">
+                        🔬 <strong>Catatan Modern:</strong> Tes DNA memiliki akurasi 99.99% dan menjadi standar emas 
+                        untuk tes paternitas. Golongan darah hanya digunakan sebagai skrining awal.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SIMULASI SECTION
+         ============================================ -->
+    <section class="section simulasi-section" id="simulasi">
+        <div class="container">
+            <div class="section-header

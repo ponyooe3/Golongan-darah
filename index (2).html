@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="Media pembelajaran interaktif golongan darah untuk siswa SMA dan mahasiswa">
     <meta name="keywords" content="golongan darah, genetika, biologi, pembelajaran, ABO, Rhesus, pewarisan">
     <meta name="author" content="GenetikaLab">
@@ -236,6 +236,270 @@
     <section class="section kuis-section" id="kuis">
         <div class="container">
             <div class="section-header fade-in">
+                <h2 class="section-title">Kuis Interaktif Golongan Darah</h2>
+                <p class="section-subtitle">Uji pemahaman Anda tentang genetika golongan darah dengan 10 soal pilihan ganda</p>
+            </div>
+
+            <div class="quiz-container fade-in">
+                <div class="quiz-card" id="quizCard">
+                    <div class="quiz-header">
+                        <div class="quiz-progress">
+                            <span id="questionNumber">Pertanyaan 1</span>
+                            <span id="questionTotal">dari 10</span>
+                        </div>
+                        <div class="quiz-score" id="quizScore" style="display: none;">
+                            Skor: <span id="scoreValue">0</span>/10
+                        </div>
+                    </div>
+
+                    <div class="quiz-content" id="quizContent">
+                        <h3 class="quiz-question" id="questionText"></h3>
+                        <div class="quiz-options" id="quizOptions"></div>
+                    </div>
+
+                    <div class="quiz-buttons">
+                        <button class="btn btn-secondary" id="prevBtn" onclick="previousQuestion()" style="display: none;">
+                            ← Sebelumnya
+                        </button>
+                        <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()">
+                            Selanjutnya →
+                        </button>
+                        <button class="btn btn-primary" id="submitBtn" onclick="submitQuiz()" style="display: none;">
+                            ✓ Lihat Hasil
+                        </button>
+                        <button class="btn btn-secondary" id="restartBtn" onclick="restartQuiz()" style="display: none;">
+                            🔄 Ulangi Kuis
+                        </button>
+                    </div>
+
+                    <div class="quiz-explanation" id="quizExplanation" style="display: none;"></div>
+                </div>
+
+                <div class="quiz-results" id="quizResults" style="display: none;">
+                    <div class="results-card">
+                        <div class="results-icon" id="resultsIcon"></div>
+                        <h3 id="resultsTitle"></h3>
+                        <div class="results-score">
+                            <div class="score-circle">
+                                <span id="finalScore">0</span>
+                                <span class="score-total">/10</span>
+                            </div>
+                        </div>
+                        <p id="resultsMessage"></p>
+                        <div class="results-breakdown" id="resultsBreakdown"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         KONTAK SECTION
+         ============================================ -->
+    <section class="section kontak-section" id="kontak">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Hubungi Kami</h2>
+                <p class="section-subtitle">Ada pertanyaan atau saran? Kirimkan pesan kepada kami</p>
+            </div>
+
+            <div class="contact-container fade-in">
+                <div class="contact-info">
+                    <h3>Informasi Kontak</h3>
+                    <div class="info-item">
+                        <span class="info-icon">📧</span>
+                        <div>
+                            <strong>Email</strong>
+                            <p>genetikalab@education.id</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">📱</span>
+                        <div>
+                            <strong>Telepon</strong>
+                            <p>+62 812-3456-7890</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">🏫</span>
+                        <div>
+                            <strong>Alamat</strong>
+                            <p>Jl. Pendidikan No. 123<br>Jakarta, Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">⏰</span>
+                        <div>
+                            <strong>Jam Operasional</strong>
+                            <p>Senin - Jumat: 08.00 - 17.00 WIB<br>Sabtu: 09.00 - 15.00 WIB</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="contactName">Nama Lengkap *</label>
+                        <input type="text" id="contactName" name="name" required placeholder="Masukkan nama lengkap Anda">
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactEmail">Email *</label>
+                        <input type="email" id="contactEmail" name="email" required placeholder="nama@email.com">
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactSubject">Subjek</label>
+                        <input type="text" id="contactSubject" name="subject" placeholder="Subjek pesan">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactMessage">Pesan *</label>
+                        <textarea id="contactMessage" name="message" rows="5" required placeholder="Tulis pesan Anda di sini..."></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">📨 Kirim Pesan</button>
+
+                    <div class="form-success" id="formSuccess" style="display: none;">
+                        ✓ Pesan berhasil dikirim! Kami akan segera menghubungi Anda dalam 1x24 jam.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>🧬 GenetikaLab</h4>
+                    <p>Platform pembelajaran interaktif untuk memahami genetika golongan darah dengan cara yang menyenangkan, mudah dipahami, dan berbasis sains.</p>
+                    <div class="social-links" style="margin-top: 1rem;">
+                        <a href="#" style="margin-right: 1rem; color: inherit; text-decoration: none;">📘 Facebook</a>
+                        <a href="#" style="margin-right: 1rem; color: inherit; text-decoration: none;">🐦 Twitter</a>
+                        <a href="#" style="color: inherit; text-decoration: none;">📷 Instagram</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Menu Utama</h4>
+                    <ul>
+                        <li><a href="#beranda">Beranda</a></li>
+                        <li><a href="#konsep">Konsep Dasar</a></li>
+                        <li><a href="#pewarisan">Pewarisan Genetik</a></li>
+                        <li><a href="#simulasi">Simulasi Interaktif</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Fitur</h4>
+                    <ul>
+                        <li><a href="#kuis">Kuis Evaluasi</a></li>
+                        <li><a href="#kontak">Hubungi Kami</a></li>
+                        <li><a href="#">Materi Lengkap (PDF)</a></li>
+                        <li><a href="#">Video Tutorial</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Sumber Daya</h4>
+                    <ul>
+                        <li><a href="#">Panduan Penggunaan</a></li>
+                        <li><a href="#">FAQ (Pertanyaan Umum)</a></li>
+                        <li><a href="#">Referensi Ilmiah</a></li>
+                        <li><a href="#">Tentang Kami</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GenetikaLab. Dibuat untuk tujuan edukasi dan pembelajaran. Semua hak cipta dilindungi undang-undang.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.875rem;">Dikembangkan dengan ❤️ untuk pendidikan biologi di Indonesia</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()" aria-label="Kembali ke atas">↑</button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html> fade-in">
+                <h2 class="section-title">Simulasi Pewarisan Golongan Darah</h2>
+                <p class="section-subtitle">Hitung kemungkinan golongan darah anak berdasarkan golongan darah orang tua</p>
+            </div>
+
+            <div class="simulator-container fade-in">
+                <div class="simulator-card">
+                    <div class="simulator-inputs">
+                        <div class="parent-input">
+                            <h3>👨 Golongan Darah Ayah</h3>
+                            <div class="input-group">
+                                <label for="fatherBlood">Golongan ABO</label>
+                                <select id="fatherBlood" class="blood-select">
+                                    <option value="">Pilih Golongan</option>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="AB">AB</option>
+                                    <option value="O">O</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="fatherRh">Rhesus</label>
+                                <select id="fatherRh" class="blood-select">
+                                    <option value="">Pilih Rhesus</option>
+                                    <option value="positive">Positif (+)</option>
+                                    <option value="negative">Negatif (-)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="cross-symbol">×</div>
+
+                        <div class="parent-input">
+                            <h3>👩 Golongan Darah Ibu</h3>
+                            <div class="input-group">
+                                <label for="motherBlood">Golongan ABO</label>
+                                <select id="motherBlood" class="blood-select">
+                                    <option value="">Pilih Golongan</option>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="AB">AB</option>
+                                    <option value="O">O</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="motherRh">Rhesus</label>
+                                <select id="motherRh" class="blood-select">
+                                    <option value="">Pilih Rhesus</option>
+                                    <option value="positive">Positif (+)</option>
+                                    <option value="negative">Negatif (-)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary btn-calculate" id="calculateBtn" onclick="calculateInheritance()">
+                        🧬 Hitung Kemungkinan
+                    </button>
+
+                    <div class="simulator-results" id="simulatorResults" style="display: none;">
+                        <h3>Hasil Simulasi</h3>
+                        <div id="resultsContent"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         KUIS SECTION
+         ============================================ -->
+    <section class="section kuis-section" id="kuis">
+        <div class="container">
+            <div class="section-header fade-in">
                 <h2 class="section-title">Kuis Interaktif</h2>
                 <p class="section-subtitle">Uji pemahaman Anda tentang golongan darah dan genetika</p>
             </div>
@@ -317,14 +581,14 @@
                         <span class="info-icon">📱</span>
                         <div>
                             <strong>Telepon</strong>
-                            <p>+62 812-5717-7241</p>
+                            <p>+62 812-3456-7890</p>
                         </div>
                     </div>
                     <div class="info-item">
                         <span class="info-icon">🏫</span>
                         <div>
                             <strong>Alamat</strong>
-                            <p>Jl. Jl. Brigjen Jl. Brigjend H. Hasan Basri<br>Banjarmasin, Indonesia</p>
+                            <p>Jl. Pendidikan No. 123<br>Jakarta, Indonesia</p>
                         </div>
                     </div>
                 </div>
